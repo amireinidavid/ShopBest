@@ -11,7 +11,7 @@ export const registerUser = createAsyncThunk(
   "auth/register",
   async (formData) => {
     const response = await axios.post(
-      "http://localhost:5000/api/auth/register",
+      "https://shop-best-server.vercel.app/register",
       formData,
       {
         withCredentials: true,
@@ -41,7 +41,7 @@ export const checkAuth = createAsyncThunk("/auth/check-auth", async () => {
 
 export const loginUser = createAsyncThunk("auth/login", async (formData) => {
   const response = await axios.post(
-    "http://localhost:5000/api/auth/login",
+    "https://shop-best-server.vercel.app/api/auth/login",
     formData,
     {
       withCredentials: true,
